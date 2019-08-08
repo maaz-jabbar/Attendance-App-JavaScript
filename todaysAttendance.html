@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Attendance | Login</title>
+</head>
+<body>
+    <div class="header">
+        <div>
+                <a href="home.html">Students</a>
+                <a href="markAttendance.html">Mark Attendance</a>
+                <a class="active" href="todaysAttendance.html">Today's Attendance</a>
+                <a href="studentAttendance.html">Student Attendance</a>
+                <button onclick="signOut()" class="btn signout">Sign Out</button>
+             </div>
+    </div>
+    <div class="container">
+<h1>Check Today's Attendance</h1> <select id="todayAtt">
+    <option value="Section A">Section A</option>
+    <option value="Section B">Section B</option>
+</select>
+<button onclick="viewToday()" class="btn">View</button>
+<div id="today"></div></div>
+</body>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-storage.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "xxxxxxxxxxxxxxxxxx",
+          authDomain: "xxxxxxxxxxxxxxxxxx",
+          databaseURL: "xxxxxxxxxxxxxxxxxx",
+          projectId: "xxxxxxxxxxxxxxxxxx",
+          storageBucket: "xxxxxxxxxxxxxxxxxx",
+          messagingSenderId: "xxxxxxxxxxxxxxxxxx",
+          appId: "xxxxxxxxxxxxxxxxxx"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      </script>
+    <script src="app.js"></script>
+</html>

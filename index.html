@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Attendance | Login</title>
+</head>
+<body>
+    <div class="login">
+        <div class="login-screen">
+            <div class="app-title">
+                <h1>Login</h1>
+            </div>
+
+            <div class="login-form">
+                <div class="control-group">
+                <input type="text" class="login-field" value="" placeholder="Username or Email" id="email">
+                <label class="login-field-icon fui-user" for="email"></label>
+                </div>
+
+                <div class="control-group">
+                <input type="password" class="login-field" value="" placeholder="Password" id="pass">
+                <label class="login-field-icon fui-lock" for="pass"></label>
+                </div>
+
+                <button id="login-btn" class="btn" onclick="signIn()">Login</button>
+                <span class="uni">Not a Member yet? <a href="signup.html">SignUp!</a></span>
+                <a class="login-link" onclick="forgetPass()" href="#">Forgot your password?</a>
+            </div>
+        </div>
+    </div>
+</body>
+ <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-storage.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "xxxxxxxxxxxxxxxxxx",
+          authDomain: "xxxxxxxxxxxxxxxxxx",
+          databaseURL: "xxxxxxxxxxxxxxxxxx",
+          projectId: "xxxxxxxxxxxxxxxxxx",
+          storageBucket: "xxxxxxxxxxxxxxxxxx",
+          messagingSenderId: "xxxxxxxxxxxxxxxxxx",
+          appId: "xxxxxxxxxxxxxxxxxx"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      </script>
+    <script src="app.js"></script>
+</html>

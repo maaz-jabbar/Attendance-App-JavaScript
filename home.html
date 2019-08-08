@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Attendance | Login</title>
+</head>
+<body onload="getAllStudents();">
+
+
+    <div class="header">
+        <div>
+                <a class="active"  href="home.html">Students</a>
+                <a href="markAttendance.html">Mark Attendance</a>
+                <a href="todaysAttendance.html">Today's Attendance</a>
+                <a href="studentAttendance.html">Student Attendance</a>
+                <button onclick="signOut()" class="btn signout">Sign Out</button>
+             </div>
+    </div>
+
+
+    <div class ="add">
+        <button class = "btn" onclick="document.getElementById('id01').style.display='block'">Add Student</button>
+  </div>
+     
+<div  id="id01" class="modal">
+    <div class="modal-content animate">
+    <h1  style = "display: inline-block">Add Student</h1>
+    
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <div class="student-ad">
+            <input type="text" placeholder="Student Name" id="studentName"/><br><br>
+            <input type="text" placeholder="Father Name" id="fatherName"/><br><br>
+            <input type="text" id="rollNo" placeholder="Roll No#"><br><br>
+            <input type="file" id="file" accept="image/png, image/jpeg"><br><br>
+            <select id="section">
+                <option value="Section A">Section A</option>
+                <option value="Section B">Section B</option>
+            </select><br><br>
+            <button onclick="addStudent()" class="btn">Add Student</button>
+        </div>
+    </div>
+</div>
+
+    
+    
+
+    <div id="students"></div>
+
+
+</body>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-storage.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "xxxxxxxxxxxxxxxxxx",
+          authDomain: "xxxxxxxxxxxxxxxxxx",
+          databaseURL: "xxxxxxxxxxxxxxxxxx",
+          projectId: "xxxxxxxxxxxxxxxxxx",
+          storageBucket: "xxxxxxxxxxxxxxxxxx",
+          messagingSenderId: "xxxxxxxxxxxxxxxxxx",
+          appId: "xxxxxxxxxxxxxxxxxx"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      </script>
+    <script src="app.js"></script>
+</html>
